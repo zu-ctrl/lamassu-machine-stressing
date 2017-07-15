@@ -1,0 +1,27 @@
+{
+  "name": "lamassu-machine-stressing",
+  "version": "1.0.0",
+  "description": "Stress test for lamassu-machine",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamassu/lamassu-machine-stressing.git"
+  },
+  "author": "Josh Harvey <josh@lamassu.is> (https://lamassu.is/)",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/lamassu/lamassu-machine-stressing/issues"
+  },
+  "homepage": "https://github.com/lamassu/lamassu-machine-stressing#readme",
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "lodash": "^4.17.4",
+    "ws": "^3.0.0"
+  }
+}
