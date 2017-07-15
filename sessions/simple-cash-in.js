@@ -4,10 +4,10 @@ const fsm = new StateMachine({
   init: 'start',
   transitions: [
     {name: 'chooseCoin', from: 'start', to: 'readyForBill'},
-    {name: 'insertBill', from: 'readyForBill', to: 'processingBill'},
+    {name: 'scanned', from: 'readyForBill', to: 'processingBill'},
     {name: 'processBill', from: 'processingBill', to: 'readyForBill'},
     {name: 'sendCoins', from: 'readyForBill', to: 'waitingForReceipt'},
-    {name: 'gotReceipt', from: 'waitingForReceipt', to: 'waitingForCompleted'},
+    {name: 'cryptoTransferPending', from: 'waitingForReceipt', to: 'waitingForCompleted'},
     {name: 'complete', from: 'waitingForCompleted', to: 'start'}
   ],
   methods: {
