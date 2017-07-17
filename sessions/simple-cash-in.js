@@ -10,26 +10,7 @@ const SimpleCashIn = StateMachine.factory({
     {name: 'sendCoins', from: 'readyForBill', to: 'waitingForReceipt'},
     {name: 'wsCryptoTransferPending', from: 'waitingForReceipt', to: 'waitingForCompleted'},
     {name: 'complete', from: 'waitingForCompleted', to: 'completed'}
-  ],
-  data: bills => ({bills, iteration: 0}),
-  methods: {
-    onReadyForBill
-  }
+  ]
 })
 
 module.exports = SimpleCashIn
-
-function onReadyForBill () {
-  const bill = this.bills[this.iteration]
-
-  console.log('DEBUG100: %j', {bill, bills: this.bills})
-
-  if (!bill) {
-    this.iteration = 0
-    this.sendCoins()
-    return
-  }
-
-  this.iteration = this.iteration + 1
-  this.insertBill(bill)
-}
