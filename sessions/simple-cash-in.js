@@ -1,7 +1,7 @@
 
 const machina = require('machina')
 
-const SimpleCashIn = new machina.BehavioralFsm({
+const SimpleCashIn = new machina.Fsm({
   initialState: 'start',
   states: {
     start: {wsChooseCoin: 'scanning'},
