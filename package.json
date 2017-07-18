@@ -23,6 +23,7 @@
     "chalk": "^2.0.1",
     "javascript-state-machine": "^3.0.1",
     "lodash": "^4.17.4",
+    "machina": "^2.0.0",
     "ws": "^3.0.0"
   },
   "devDependencies": {}
